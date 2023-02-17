@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import India from "./component/APIcomponent/India";
+import USA from "./component/APIcomponent/USA";
+import Navbar from "./component/Navbar";
+import Tech from "./component/APIcomponent/Tech";
+import BBC from "./component/APIcomponent/BBC";
+import Bitcoin from "./component/APIcomponent/Bitcoin";
+
+// const Demoimg ="https://t3.ftcdn.net/jpg/04/62/93/66/360_F_462936689_BpEEcxfgMuYPfTaIAOC1tCDurmsno7Sp.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<India />}/>
+          <Route path="usa" element={<USA />} />
+          <Route path="tech" element={<Tech />} />
+          <Route path="bbc" element={<BBC />} />
+          <Route path="bitcoin" element={<Bitcoin />} />
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 
