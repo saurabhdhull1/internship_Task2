@@ -14,11 +14,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<India />}/>
-          <Route path="usa" element={<USA />} />
-          <Route path="tech" element={<Tech />} />
-          <Route path="bbc" element={<BBC />} />
-          <Route path="bitcoin" element={<Bitcoin />} />
+        <Route exact path="/" element={<India />}/>
+          <Route exact path="usa" element={<USA />} />
+          <Route exact path="tech" element={<Tech />} />
+          <Route exact path="bbc" element={<BBC />} />
+          <Route exact path="bitcoin" element={<Bitcoin />} />
         
       </Routes>
     </BrowserRouter>
